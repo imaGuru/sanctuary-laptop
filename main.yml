@@ -1,0 +1,68 @@
+---
+- hosts: local
+  remote_user: guru
+  become: yes
+  become_method: su
+  tasks:
+  - name: Install packages
+    package:
+      name: "{{ item }}"
+      state: latest
+    loop:
+      - perl
+      - python
+      - python-pip
+      - php
+      - composer
+      - nodejs
+      - npm
+      - yarn
+      - neovim
+      - ranger
+      - postgresql
+      - audacity
+      - build-essentials
+      - bash-completion
+      - blender
+      - gimp
+      - inkscape
+      - nginx
+      - bumblebee
+      - bbswitch
+      - firefox
+      - chromium
+      - cups
+      - go
+      - gparted
+      - hunspell
+      - hunspell-en
+      - hunspell-pl
+      - jdk
+      - keepassxc
+      - octave
+      - vlc
+      - lsof
+      - mesa
+      - xorg
+      - wayland
+      - net-tools
+      - wireless_tools
+      - wpa_supplicant
+      - nvidia
+      - ntfs-3g
+      - nvidia-utils
+      - opencv
+      - thunar
+      - powerline
+      - pulseaudio
+      - qemu
+      - dmenu
+      - redis
+      - rabbitmq
+      - sudo
+      - unzip
+      - vncviewer
+      - tensorflow
+      - cuda
+      - transmission-gtk
+
